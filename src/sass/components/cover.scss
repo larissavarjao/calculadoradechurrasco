@@ -1,0 +1,50 @@
+.cover-background {
+    z-index: 1;
+    img {
+        width: $tela-perc;
+        height: $tela-perc;
+        object-fit: cover;
+        position: absolute;
+    }
+}
+
+.cover-text {
+    position: absolute;
+    z-index: 2;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    @include display-flex(column, center, center);
+    width: $tela-perc;
+    height: 80%;
+
+    .cover-title {
+        font-size: 50pt;
+    }
+
+    .cover-options {
+        width: 60%;
+        height: 60%;
+        @include display-flex(row, space-around, center);
+
+        .cover-item-calc {
+            width: 24%;
+            position: relative;
+            @include display-flex(column, center, center);
+            
+            :hover {
+                cursor: pointer;
+            }
+
+            h3 {
+                position: absolute;
+                z-index: 44;
+                bottom: 5%;
+            }
+
+            img {
+                z-index: 2;
+                width: $tela-perc;
+            }
+        }
+    }
+}
