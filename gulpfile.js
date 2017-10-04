@@ -19,9 +19,6 @@ gulp.task('sass', function(){
 
 gulp.task('js', function(){
     gulp.src('src/js/*.js')
-        .pipe(babel({
-            presets: ['es2015']
-        }))
         .pipe(changed('public/js'))
         .pipe(gulp.dest('public/js'))
         .pipe(connect.reload())
