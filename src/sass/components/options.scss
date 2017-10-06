@@ -1,0 +1,29 @@
+.options-all{
+    opacity: 0;
+    background-color: $background-calculator;
+    position: absolute;
+    z-index: 2;
+    height: 65vh;
+    width: 70vw;
+    top: 25vh;
+    right: 15vw;
+    border-radius: 10px;
+
+    .options-bottons{
+        position: relative;
+        top: 5%;
+        left: 2%;
+    }
+
+    .options-title {
+        text-transform: uppercase;
+        color: white;
+        @include display-flex(column, center, center);
+    }
+
+    img{
+        position: relative;
+        width: 5%;
+        padding: 0.5%;
+    }
+}

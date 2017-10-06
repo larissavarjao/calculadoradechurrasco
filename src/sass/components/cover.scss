@@ -1,16 +1,6 @@
-.cover-background {
-    z-index: 1;
-    img {
-        width: $tela-perc;
-        height: $tela-perc;
-        object-fit: cover;
-        position: absolute;
-    }
-}
-
 .cover-text {
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     color: #FFFFFF;
     text-transform: uppercase;
     @include display-flex(column, center, center);

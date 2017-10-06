@@ -2,3 +2,13 @@ body {
     font-family: $font-text;
     margin: 0;
 }
+
+.cover-background {
+    z-index: 1;
+    img {
+        width: $tela-perc;
+        height: $tela-perc;
+        object-fit: cover;
+        position: absolute;
+    }
+}
