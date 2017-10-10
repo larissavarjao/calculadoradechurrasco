@@ -1,18 +1,80 @@
 .options-all{
+    transition: transform 2s, opacity 2s;
     opacity: 0;
     background-color: $background-calculator;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     height: 65vh;
-    width: 70vw;
+    width: 55%;
     top: 25vh;
-    right: 15vw;
+    left: 23%;
     border-radius: 10px;
+    color: white;
 
-    .options-bottons{
+    .options-icons{
+        @include display-flex(row, flex-start, center);
+        width: 20%;
+
+        .options-bottons {
+            position: relative;
+            margin-top: 10%;
+            left: 10%;
+
+            img {
+                width: 70%;
+            }
+            
+            &:hover {   
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    .options-options {
+        @include display-flex(row, space-around, center);
+    }
+
+    .options-input {
         position: relative;
-        top: 5%;
-        left: 2%;
+        @include display-flex(column, space-around, center);
+        width: 30%;
+
+
+        p, input, button {
+            margin: 5%;
+        }
+
+        input {
+            width: 30%;
+            background-color: $background-calculator;
+            border: solid $vermelho-terra 2px;
+            color: white;
+            text-align: center;
+        }
+
+        .calculate {
+            text-transform: uppercase;
+            padding: 5%;
+            background-color: $vermelho-terra;
+            border: none;
+            color: white;
+            font-family: $font-text;
+            font-size: 12pt;
+            letter-spacing: 4px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .options-answer {
+        @extend .options-input;
+        width: 25%;
+        p {
+            margin: 5%;
+        }
     }
 
     .options-title {
@@ -23,7 +85,7 @@
 
     img{
         position: relative;
-        width: 5%;
+        width: 3%;
         padding: 0.5%;
     }
 }

@@ -2,27 +2,28 @@
     position: absolute;
     z-index: 4;
     color: #FFFFFF;
-    text-transform: uppercase;
     @include display-flex(column, center, center);
     width: $tela-perc;
     height: 80%;
-
+    
     .cover-title {
         font-size: 50pt;
+        text-transform: uppercase;
     }
-
+    
     .cover-options {
         width: 60%;
         height: 60%;
         @include display-flex(row, space-around, center);
-
+        
         .cover-item-calc {
+            transition: transform 2s, opacity 2s;
             width: 24%;
             position: relative;
             @include display-flex(column, center, center);
+            text-transform: uppercase;
             
-            :hover {
-                
+            &:hover {
                 cursor: pointer;
             }
 
