@@ -16,6 +16,16 @@ var chickenTitle = document.querySelector('.chicken-title');
 var chickenNumber = document.querySelector('.chicken-number');
 var otherTitle = document.querySelector('.other-title');
 var otherNumber = document.querySelector('.other-number');
+var valueAdult = document.querySelector('#value-adult');
+var valueChild = document.querySelector('#value-child');
+var calculateID = document.querySelector('.calculate');
+var total = 0;
+var carne = 0;
+var frango = 0;
+var aperetivo = 0;
+var pizzaQtd = 0;
+var refrigerante = 0;
+var cerveja = 0;
 
 Array.prototype.forEach.call(capa, function (item, index, array) {
     item.addEventListener('click', function () {
@@ -44,6 +54,16 @@ Array.prototype.forEach.call(optionsBottons, function (item, index, array) {
             showPizza();
         }
     });
+});
+
+calculateID.addEventListener('click', function () {
+    if (optionTitle.innerHTML == 'Churrasco') {
+        calculate('meat');
+    } else if (optionTitle.innerHTML == 'Bebidas') {
+        calculate('beer');
+    } else if (optionTitle.innerHTML == 'Pizza') {
+        calculate('pizza');
+    }
 });
 
 function hiddenCoverItemCalc() {
@@ -77,6 +97,7 @@ function showMeat() {
     optionTitle.innerHTML = 'Churrasco';
     meatTitle.innerHTML = 'Quantidade de carne:';
     meatNumber.innerHTML = 'XXX g';
+    chickenTitle.innerHTML = 'Quantidade de frango:';
     chickenTitle.style.display = 'flex';
     chickenNumber.style.display = 'flex';
     otherTitle.style.display = 'flex';
@@ -89,6 +110,7 @@ function showBeer() {
     meatNumber.innerHTML = 'XXX L';
     chickenTitle.style.display = 'flex';
     chickenTitle.innerHTML = 'Quantidade de cerveja:';
+    chickenNumber.innerHTML = 'XXX g';
     chickenNumber.style.display = 'flex';
     chickenNumber.innerHTML = 'XXX L';
     otherTitle.style.display = 'none';
@@ -98,10 +120,37 @@ function showBeer() {
 function showPizza() {
     optionTitle.innerHTML = 'Pizza';
     meatTitle.innerHTML = 'Quantidade de pizza:';
-    meatNumber.innerHTML = 'XXX g';
+    meatNumber.innerHTML = 'XXX pizzas';
     chickenTitle.style.display = 'none';
     chickenNumber.style.display = 'none';
     otherTitle.style.display = 'none';
     otherNumber.style.display = 'none';
+}
+
+var carne = 0;
+var frango = 0;
+var aperetivo = 0;
+var pizzaQtd = 0;
+var refrigerante = 0;
+var cerveja = 0;
+
+function calculate(option) {
+    total = Number(valueAdult.value) + Number(valueChild.value / 2);
+    if (option === 'meat') {
+        carne = total * 0.4;
+        meatNumber.innerHTML = carne + ' kg';
+        frango = total * 0.05;
+        chickenNumber.innerHTML = frango + ' kg';
+        aperetivo = total * 1;
+        otherNumber.innerHTML = aperetivo + ' pães de alho';
+    } else if (option === 'beer') {
+        refrigerante = total * 1.5;
+        meatNumber.innerHTML = refrigerante + ' L';
+        cerveja = total * 4;
+        chickenNumber.innerHTML = cerveja + ' latas';
+    } else if (option === 'pizza') {
+        pizzaQtd = Math.ceil(total * 0.5);
+        meatNumber.innerHTML = pizzaQtd + ' pizzas';
+    }
 }
 "use strict";
