@@ -19,6 +19,7 @@ var otherNumber = document.querySelector('.other-number');
 var valueAdult = document.querySelector('#value-adult');
 var valueChild = document.querySelector('#value-child');
 var calculateID = document.querySelector('.calculate');
+var pageTitle = document.querySelector('.cover-title');
 var total = 0;
 var carne = 0;
 var frango = 0;
@@ -67,6 +68,7 @@ calculateID.addEventListener('click', function () {
 });
 
 function hiddenCoverItemCalc() {
+    pageTitle.style.display = 'none';
     subtitle.style.display = 'none';
     churrasco.style.display = 'none';
     bebidas.style.display = 'none';
@@ -80,6 +82,7 @@ function showOptionAll() {
     });
 }
 function showCoverItemCalc() {
+    pageTitle.style.display = 'flex';
     subtitle.style.display = 'flex';
     churrasco.style.display = 'flex';
     bebidas.style.display = 'flex';
