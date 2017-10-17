@@ -13,13 +13,14 @@
             font-size: 12pt;
         }
     }
-
+    
     .option {
         #size {
             width: 80%;
             height: 55%;
             border-radius: 10px;
         }
+        
         p{
             text-align: center;
             font-size: 9pt;
@@ -28,12 +29,13 @@
             width: 40%;
         }
         .option-all {
-            .options-icons{
-                .options-bottons {
-                    img { 
-                        width: 100%;
-                    }
-                }
+            #size-icons{
+                width: 40%;
+    
+            }
+
+            .options-icons {
+                width: 40%;
             }
         }
     }
