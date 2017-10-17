@@ -3,8 +3,12 @@ const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const align = require('gulp-align');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 <<<<<<< HEAD
 >>>>>>> master
 const autoprefixer = require('gulp-autoprefixer');
@@ -14,7 +18,10 @@ const changed = require('gulp-changed');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
 =======
 const notify = require('gulp-notify');
 =======
@@ -29,6 +36,9 @@ const concat = require('gulp-concat');
 =======
 const uglify = require('gulp-uglify');
 >>>>>>> Pendente resolver flebox auto-prefixer
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
 gulp.task('sass', function () {
@@ -37,9 +47,12 @@ gulp.task('sass', function () {
         .pipe(sass())
         .pipe(autoprefixer({
 <<<<<<< HEAD
+<<<<<<< HEAD
             browsers: ['last 2 versions', 'last 2 major versions', 'Firefox > 20', 'iOS 7', 'ie 6-8', 'last 2 iOS major versions'],
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> master
 <<<<<<< HEAD
             browsers: ['last 2 versions', 'last 2 major versions', 'Firefox > 20', 'iOS 7', 'ie 6-8', 'last 2 iOS major versions'],
 =======
@@ -48,28 +61,43 @@ gulp.task('sass', function () {
 =======
             browsers: ['last 2 versions', 'last 2 major versions', 'Firefox > 20', 'iOS 7', 'ie 6-8', 'last 2 iOS major versions'],
 >>>>>>> Pendente resolver flebox auto-prefixer
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
             cascade: false
         }))
         .pipe(cleanCSS())
         .pipe(gulp.dest('public/css'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> master
 <<<<<<< HEAD
 =======
         .pipe(notify('SASS Salvo e modificado!'))
 >>>>>>> Site versao 1.0
 =======
 >>>>>>> Pendente resolver flebox auto-prefixer
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
         .pipe(connect.reload())
 });
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Pendente resolver flebox auto-prefixer
+>>>>>>> master
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> Pendente resolver flebox auto-prefixer
@@ -81,8 +109,11 @@ gulp.task('minify-css', () => {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 gulp.task('javasript', function () {
     gulp.src('src/js/*.js')
@@ -94,7 +125,10 @@ gulp.task('javasript', function () {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
 =======
 =======
 >>>>>>> Pendente resolver flebox auto-prefixer
@@ -112,20 +146,29 @@ gulp.task('javasript', function () {
 >>>>>>> Site versao 1.0
 =======
 >>>>>>> Pendente resolver flebox auto-prefixer
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 gulp.task('html', function () {
     gulp.src('src/*.html')
         .pipe(changed('public'))
         .pipe(gulp.dest('public/'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> master
 <<<<<<< HEAD
 =======
         .pipe(notify('HTML Salvo e modificado!'))
 >>>>>>> Site versao 1.0
 =======
 >>>>>>> Pendente resolver flebox auto-prefixer
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
         .pipe(connect.reload())
 });
@@ -154,9 +197,12 @@ gulp.task('connect', function () {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 gulp.task('default', ['html', 'javasript', 'sass', 'minify-css', 'img', 'connect', 'watch']);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> master
 <<<<<<< HEAD
 gulp.task('default', ['html', 'javasript', 'sass', 'minify-css', 'img', 'connect', 'watch']);
 =======
@@ -165,4 +211,7 @@ gulp.task('default', ['html', 'javasript', 'sass', 'img', 'connect', 'watch']);
 =======
 gulp.task('default', ['html', 'javasript', 'sass', 'minify-css', 'img', 'connect', 'watch']);
 >>>>>>> Pendente resolver flebox auto-prefixer
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
