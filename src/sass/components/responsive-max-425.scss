@@ -29,13 +29,18 @@
             width: 40%;
         }
         .option-all {
-            #size-icons{
-                width: 40%;
-    
-            }
-
-            .options-icons {
-                width: 40%;
+            .options-icons{
+                .options-bottons {
+                    img { 
+                        width: 100%;
+                    }
+                }
+                #size-icons{
+                    width: 40%;  
+                }
+                .options-icons {
+                    width: 40%;
+                }
             }
         }
     }

@@ -11,7 +11,7 @@
         background-color: $background-calculator;
         position: relative;
         z-index: 3;
-        height: 65%;
+        height: 70%;
         width: 55%;
         color: white;
     
@@ -38,13 +38,14 @@
     
         .options-options {
             @include display-flex(row, space-around, center);
+            height: 50vh;
         }
     
         .options-input {
             position: relative;
             @include display-flex(column, space-around, center);
             width: 40%;
-    
+            height: 50vh;
     
             p, input, button {
                 margin: 5%;
@@ -79,6 +80,7 @@
         .options-answer {
             @extend .options-input;
             width: 40%;
+            height: 50vh;
             p {
                 margin: 5%;
             }
