@@ -22,6 +22,7 @@
         var meatIcon = document.querySelector('#meat-icon');
         var beerIcon = document.querySelector('#beer-icon');
         var pizzaIcon = document.querySelector('#pizza-icon');
+        var optionAnswer = document.querySelector('.options-answer');
         var total = 0;
         var carne = 0;
         var frango = 0;
@@ -110,9 +111,9 @@
             chickenNumber.style.display = 'flex';
             otherTitle.style.display = 'flex';
             otherNumber.style.display = 'flex';
-            
+            optionAnswer.style.height = '50vh';
         }
-
+        
         function showBeer(){
             changeIcon('beer');
             optionTitle.innerHTML = 'Bebidas';
@@ -124,8 +125,9 @@
             chickenNumber.innerHTML = 'XXX L';
             otherTitle.style.display = 'none';
             otherNumber.style.display = 'none';
+            optionAnswer.style.height = '28vh';
         }
-
+        
         function showPizza(){
             changeIcon('pizza');
             optionTitle.innerHTML = 'Pizza';
@@ -135,8 +137,9 @@
             chickenNumber.style.display = 'none';
             otherTitle.style.display = 'none';
             otherNumber.style.display = 'none';
+            optionAnswer.style.height = '15vh';
         }
-
+        
         function calculate(option){
             total = Number(valueAdult.value) + Number(valueChild.value/2);
             if(option === 'meat'){
