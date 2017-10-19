@@ -17,7 +17,7 @@
         @include display-flex(row, space-around, center);
         
         .cover-item-calc {
-            transition: transform 2s, display 2s;
+            transition: transform 2s, display 1s;
             width: 24%;
             position: relative;
             @include display-flex(column, center, center);
