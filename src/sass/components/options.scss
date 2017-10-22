@@ -18,11 +18,11 @@
         .options-icons{
             @include display-flex(row, flex-start, center);
             width: 20%;
+            margin-top: 2%;
+            margin-left: 2%;
     
             .options-bottons {
                 position: relative;
-                margin-top: 10%;
-                left: 10%;
     
                 img {
                     width: 70%;
