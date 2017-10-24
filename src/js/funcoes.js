@@ -143,10 +143,14 @@
         function calculate(option){
             total = Number(valueAdult.value) + Number(valueChild.value/2);
             if(option === 'meat'){
+                console.log(total);
+                console.log();
+                console.log(Number(valueAdult.value));
+                console.log(Number(valueChild.value/2));
                 carne = String(total * 0.4);
-                meatNumber.innerHTML = carne.match(/\d.\d\d/) + ' kg';
+                meatNumber.innerHTML = carne.match(/[\d.\d\d]/) + ' kg';
                 frango = String(total * 0.05);
-                chickenNumber.innerHTML = frango.match(/\d.\d\d/) + ' kg';
+                chickenNumber.innerHTML = frango.match(/[\d.\d\d]/) + ' kg';
                 aperetivo = total * 1;
                 otherNumber.innerHTML = aperetivo + ' pães de alho';
             } else if(option === 'beer'){
