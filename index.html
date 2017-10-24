@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora de Churrasco</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <div class="cover-text">
+        <h1 class="cover-title">Calculadora de Churrasco</h1>
+        <h3 class="cover-subtitle">Escolha a opção abaixo desejada: </h3>
+        <div class="cover-options">
+            <div class="cover-item-calc churrasco">
+                <img src="img/meat.png">
+                <h3>Churrasco</h3>
+            </div>
+            <div class="cover-item-calc bebidas">
+                <img src="img/beer.png">
+                <h3>Bebidas</h3>
+            </div>
+            <div class="cover-item-calc pizza">
+                <img src="img/pizza.png">
+                <h3>Pizza</h3>
+            </div>
+        </div>
+    </div>
+    <div class="option">
+        <div class="options-all" id="size">
+            <div class="options-icons" id="size-icons">
+                <div class="options-bottons">
+                    <img src="img/previous-icon.png" id="back-icon">
+                </div>
+                <div class="options-bottons">
+                    <img src="img/meat-icon.png" id="meat-icon">
+                </div>
+                <div class="options-bottons">
+                    <img src="img/beer-icon.png" id="beer-icon">
+                </div>
+                <div class="options-bottons">
+                    <img src="img/pizza-icon.png" id="pizza-icon">
+                </div>
+            </div>
+            <div class="options-content">
+                <h1 class="options-title">Titulo Calculadora</h1>
+                <div class="options-options">
+                    <div class="options-input">
+                        <p>Quantidade de adultos</p>
+                        <input type="number" value="0" id="value-adult">
+                        <p>Quantidade de crianças</p>
+                        <input type="number" value="0" id="value-child">
+                        <button class="calculate">Calcular!</button>
+                    </div>
+                    <div class="options-answer">
+                        <p class="meat-title">Quantidade de carne:</p>
+                        <p class="meat-number">XXX g</p>
+                        <p class="chicken-title">Quantidade de frango:</p>
+                        <p class="chicken-number">XXX g</p>
+                        <p class="other-title">Quantidade de aperitivo:</p>
+                        <p class="other-number">XXX g</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cover-background">
+        <img src="img/background-cover.png" alt="background-cover">
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
