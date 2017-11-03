@@ -18,8 +18,8 @@
         
         .cover-item-calc {
             transition: transform 2s, display 1s;
-            width: 20%;
-            height: 60%;
+            width: 140px;
+            height: 150px;
             position: relative;
             @include display-flex(column, center, center);
             text-transform: uppercase;

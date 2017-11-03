@@ -7,17 +7,22 @@
         .cover-options {
             width: 100%;
             height: auto;
+            .cover-item-calc {
+                width: 80px;
+                height: 80px;
+            }
         }
         h3 {
             margin: 0 0 8% 0;
             font-size: 12pt;
         }
+
     }
     
     .option {
         #size {
             width: 80%;
-            height: 55%;
+            height: 65%;
             border-radius: 10px;
         }
         
@@ -29,6 +34,7 @@
             width: 40%;
         }
         .option-all {
+            height: 65%;
             .options-icons{
                 .options-bottons {
                     img { 
