@@ -33,7 +33,6 @@
 
         Array.prototype.forEach.call(capa, function(item, index, array) {
             item.addEventListener('click', function(){
-                
                 hiddenCoverItemCalc();
                 showOptionAll();
                 if(index === 0 ){
@@ -79,12 +78,6 @@
             pizza.style.display = 'none';
         }
 
-        function showOptionAll(){
-            Array.prototype.forEach.call(optionAll, function(item, index, array){
-                item.style.opacity = 1;
-                item.style.zIndex = 9;
-            });
-        }
         function showCoverItemCalc(){
             pageTitle.style.display = 'flex';
             subtitle.style.display = 'flex';
@@ -93,6 +86,13 @@
             pizza.style.display = 'flex';
         }
 
+        function showOptionAll(){
+            Array.prototype.forEach.call(optionAll, function(item, index, array){
+                item.style.opacity = 1;
+                item.style.zIndex = 9;
+            });
+        }
+        
         function hiddenOptionAll(){
             Array.prototype.forEach.call(optionAll, function(item, index, array){
                 item.style.opacity = 0;
@@ -143,10 +143,6 @@
         function calculate(option){
             total = Number(valueAdult.value) + Number(valueChild.value/2);
             if(option === 'meat'){
-                console.log(total);
-                console.log();
-                console.log(Number(valueAdult.value));
-                console.log(Number(valueChild.value/2));
                 carne = String(total * 0.4);
                 meatNumber.innerHTML = carne.match(/[\d.\d\d]/) + ' kg';
                 frango = String(total * 0.05);
@@ -154,7 +150,7 @@
                 aperetivo = total * 1;
                 otherNumber.innerHTML = aperetivo + ' pães de alho';
             } else if(option === 'beer'){
-                refrigerante = total * 1.5;
+                refrigerante = total * 0.5;
                 meatNumber.innerHTML = refrigerante + ' L';
                 cerveja = total * 4;
                 chickenNumber.innerHTML = cerveja + ' latas de 350ml';
@@ -180,7 +176,6 @@
                 pizzaIcon.style.width = '100%';
                 pizzaIcon.style.borderBottom = 'solid #B92D00';
             }
-
         }                                       
     }
     app();
